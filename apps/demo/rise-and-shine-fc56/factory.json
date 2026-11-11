@@ -1,0 +1,20 @@
+{
+  "user": "demo",
+  "appName": "rise-and-shine-fc56",
+  "prompt": "Build a one-page website for a neighborhood bakery called Rise & Shine, with the menu, hours, and location.",
+  "summary": "A one-page static brochure site for a neighborhood bakery, presenting the menu, hours, and location. All content is fixed and read-only with no transactions or persisted user data, so a single static_site fully serves the prompt—no backend or database is warranted.",
+  "createdAt": "2026-11-11T01:38:47.879Z",
+  "resourcePrefix": "vibe",
+  "manifest": {
+    "services": [
+      {
+        "name": "rise-and-shine-site",
+        "kind": "static_site",
+        "rootDir": ".",
+        "runtime": "static",
+        "buildCommand": "mkdir -p dist && cp src/*.html src/*.css dist/ && cp assets/*.jpg dist/",
+        "staticPublishPath": "dist"
+      }
+    ]
+  }
+}
